@@ -1,5 +1,5 @@
 package sortingalgorithms;
-
+//Create a class to perform Bubble sort on the Student Marks.
 public class BubbleSort {
     public static void main(String[] args) {
         // Define an array of student marks

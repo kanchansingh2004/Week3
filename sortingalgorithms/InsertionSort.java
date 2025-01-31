@@ -1,5 +1,5 @@
 package sortingalgorithms;
-
+//Create a class to perform Insertion sort on the employee ID
 public class InsertionSort {
     public static void main(String[] args) {
         // Define an array of employee IDs
