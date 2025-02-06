@@ -8,7 +8,7 @@ public class Compare {
         long endTime;
         String str = "Hello";
 
-        // Measuring performance of StringBuffer (Thread-safe but slower than StringBuilder)
+        // Measuring performance of StringBuffer 
         StringBuffer buffer = new StringBuffer(str);
         // Record start time and Append string repeatedly
         startTime = System.nanoTime();
@@ -19,7 +19,7 @@ public class Compare {
         endTime = System.nanoTime();
         System.out.println("Total time taken by StringBuffer is: " + (endTime - startTime));
 
-        // Measuring performance of StringBuilder (Faster than StringBuffer but not thread-safe)
+        // Measuring performance of StringBuilder 
         StringBuilder builder = new StringBuilder(str);
         // Record start time and Append string repeatedly
         startTime = System.nanoTime();
