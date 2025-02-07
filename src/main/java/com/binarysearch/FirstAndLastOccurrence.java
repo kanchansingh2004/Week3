@@ -18,7 +18,7 @@ public class FirstAndLastOccurrence {
     }
 
     // Method to find first and last occurrence of a target element in a sorted array
-    private static int[] findFirstAndLastOccurrence(int[] arr, int target) {
+    public static int[] findFirstAndLastOccurrence(int[] arr, int target) {
         int[] result = new int[2];
 
         // Initialize result with -1 (if not found)

@@ -11,7 +11,7 @@ public class RotationPoint {
     }
 
     //Method to find the rotation point of the array using binary search
-    private static int findTheRotationPoint(int[] array) {
+    public static int findTheRotationPoint(int[] array) {
         //Create a left and right pointer variable to find the element
         int left = 0 , right = array.length-1;
         //Run a while loop till right and left are equal

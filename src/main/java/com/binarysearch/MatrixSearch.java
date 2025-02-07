@@ -19,7 +19,7 @@ public class MatrixSearch {
     }
 
     // Function to perform binary search on a 2D matrix
-    private static boolean searchMatrix(int[][] matrix, int target) {
+    public static boolean searchMatrix(int[][] matrix, int target) {
         // Check if the matrix is empty
         if (matrix == null || matrix.length == 0 || matrix[0].length == 0) {
             return false;

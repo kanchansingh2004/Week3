@@ -11,7 +11,7 @@ public class PeakElement {
     }
 
     // Method to find a peak element using binary search
-    private static int findPeakElement(int[] arr) {
+    public static int findPeakElement(int[] arr) {
         int left = 0, right = arr.length - 1;
 
         while (left <= right) {

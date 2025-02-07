@@ -5,8 +5,8 @@ import java.util.Arrays;
 public class LinearAndBinarySearch {
     public static void main(String[] args) {
         // Sample list of integers and target element for binary search
-        int[] list = {3, 4, -1, 1, 2};
-        int target = 2;
+        int[] list = {3, 7, 5, 1, 2};
+        int target = 5;
 
         // Find the first missing positive integer using linear search
         int missingPositive = findFirstMissingPositive(list);
@@ -22,38 +22,26 @@ public class LinearAndBinarySearch {
     }
 
     // Method to find the first missing positive integer using linear search
-    private static int findFirstMissingPositive(int[] nums) {
+    public static int findFirstMissingPositive(int[] nums) {
         int n = nums.length;
-
-        // Step 1: Mark non-positive numbers with a value greater than n
-        for (int i = 0; i < n; i++) {
-            if (nums[i] <= 0) {
-                nums[i] = n + 1; // Replace non-positive numbers with a number larger than n
+        Arrays.sort(nums);
+        int element = 1;
+        for(int i = 0 ; i < n ; i++){
+            if(nums[i] < 0){
+                continue;
+            }
+            if(nums[i] == element){
+                element++;
+            }
+            else{
+                return element;
             }
         }
-
-        // Step 2: Use absolute value to mark the presence of numbers within the range 1 to n
-        for (int i = 0; i < n; i++) {
-            int num = Math.abs(nums[i]);
-            // Mark the corresponding index as negative to indicate the presence of the number
-            if (num <= n) {
-                nums[num - 1] = -Math.abs(nums[num - 1]); // Mark as visited
-            }
-        }
-
-        // Step 3: Find the first index with a positive value, which corresponds to the missing integer
-        for (int i = 0; i < n; i++) {
-            if (nums[i] > 0) {
-                return i + 1; // The first missing positive integer
-            }
-        }
-
-        // If all numbers from 1 to n are present, return n + 1
-        return n + 1;
+        return nums[n-1]+1;
     }
 
     // Method to perform binary search for a target number in a sorted array
-    private static int binarySearch(int[] arr, int target) {
+    public static int binarySearch(int[] arr, int target) {
         // Sort the array first for binary search
         Arrays.sort(arr);
 

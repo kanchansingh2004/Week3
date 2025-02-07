@@ -20,7 +20,7 @@ public class FindSpecificWord {
     }
 
     //Method to find the first sentence with provided specific word
-    private static String findSpecificWord(String[] array, String word) {
+    public static String findSpecificWord(String[] array, String word) {
         //Run a for each loop through array
         for (String str : array) {
             if (str.contains(word)) {
