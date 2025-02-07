@@ -16,7 +16,7 @@ public class RemoveDuplicates {
     }
 
     //Create a method to perform removal of duplicates from a string using string builder
-    private static String removeDuplicates(String str) {
+    public static String removeDuplicates(String str) {
         //Create a string builder to use its functionality to create a new string
         StringBuilder resultString = new StringBuilder();
         //Create a HashSet to store unique characters

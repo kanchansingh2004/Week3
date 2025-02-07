@@ -11,7 +11,7 @@ public class ConcatenateString {
     }
 
     //Create a method to perform concatenation of a string array to a single string
-    private static String concatenate(String[] array) {
+    public  static String concatenate(String[] array) {
         // Create a StringBuffer object to store the concatenated string
         StringBuffer str = new StringBuffer();
 
