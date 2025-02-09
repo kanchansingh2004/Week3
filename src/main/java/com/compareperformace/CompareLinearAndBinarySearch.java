@@ -48,6 +48,14 @@ public class CompareLinearAndBinarySearch {
         return array;
     }
 
+    // Displays the time taken by each sorting algorithm
+    public static void displayResult(double result1, double result2, double result3, int size) {
+        System.out.println("Time Taken by Bubble Sort: " + result1 + " ms for size " + size);
+        System.out.println("Time Taken by Quick Sort: " + result2 + " ms for size " + size);
+        System.out.println("Time Taken by Merge Sort: " + result3 + " ms for size " + size);
+        System.out.println("=====================================================");
+    }
+
     // Performs Linear Search and measures the execution time
     public static double linearSearch(int[] array, int target, int size) {
         double startTime = System.nanoTime();
