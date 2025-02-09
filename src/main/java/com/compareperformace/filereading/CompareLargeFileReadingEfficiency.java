@@ -1,12 +1,11 @@
-package com.compareperformace;
+package com.compareperformace.filereading;
 //Import the required packages
 import java.io.*;
 
 public class CompareLargeFileReadingEfficiency {
     public static void main(String[] args) {
         //Store the file path
-        String filePath = "D:\\Training_Capgemini\\Week3\\Day6\\src\\main\\java\\com\\compareperformace\\TextFile.txt";
-
+        String filePath = "D:\\Training_Capgemini\\Week3\\Day6\\src\\main\\java\\com\\compareperformace\\filereading\\TextFile.txt";
         // Measure FileReader Time
         double fileReaderTime = measureFileReader(filePath);
 
@@ -19,7 +18,7 @@ public class CompareLargeFileReadingEfficiency {
         System.out.println("=====================================================");
 
         //Store the file path
-        filePath = "D:\\Training_Capgemini\\Week3\\Day6\\src\\main\\java\\com\\compareperformace\\TextFile1.txt";
+        filePath = "D:\\Training_Capgemini\\Week3\\Day6\\src\\main\\java\\com\\compareperformace\\filereading\\TextFile1.txt";
         // Measure FileReader Time
         fileReaderTime = measureFileReader(filePath);
 
