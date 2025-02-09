@@ -1,4 +1,4 @@
-package com.comparelinearseachandbinarysearch;
+package com.compareperformace;
 
 import java.util.Arrays;
 
@@ -34,8 +34,8 @@ public class CompareLinearAndBinarySearch {
 
     // Prints out the time taken by Linear and Binary search
     public static void displayResult(double result1, double result2, int size) {
-        System.out.println("Time Taken by Linear Search: " + result1 + " ms");
-        System.out.println("Time Taken by Binary Search: " + result2 + " ms");
+        System.out.println("For Data Size "+ size +" Time Taken by Linear Search: " + result1 + " ms");
+        System.out.println("For Data Size "+ size +" Time Taken by Binary Search: " + result2 + " ms");
         System.out.println("=====================================================");
     }
 
@@ -61,7 +61,7 @@ public class CompareLinearAndBinarySearch {
         }
 
         double endTime = System.nanoTime();
-        return (endTime - startTime) / 1e6; 
+        return (endTime - startTime) / 1e6;
     }
 
     // Performs Binary Search and measures the execution time
@@ -69,7 +69,7 @@ public class CompareLinearAndBinarySearch {
         // Sorting the array first (Binary Search requires a sorted array)
         Arrays.sort(array);
 
-        int low = 0, high = array.length - 1;
+        int low = 0, high = size - 1;
         double startTime = System.nanoTime();
         double endTime;
 

@@ -1,4 +1,4 @@
-package com.comparelinearseachandbinarysearch;
+package com.compareperformace;
 
 public class SortingLargeDataEfficiency {
     public static void main(String[] args) {
@@ -71,7 +71,7 @@ public class SortingLargeDataEfficiency {
     }
 
     // Partitions the array using the last element as the pivot
-    private static int partition(int[] array, int low, int high) {
+    public static int partition(int[] array, int low, int high) {
         int pivotValue = array[high];
         int idx = low - 1;
 
@@ -143,9 +143,7 @@ public class SortingLargeDataEfficiency {
         }
 
         // Copy merged elements back to the original array
-        for (int i = 0; i < mergedArray.length; i++) {
-            array[low + i] = mergedArray[i];
-        }
+        System.arraycopy(mergedArray, 0, array, low + 0, mergedArray.length);
     }
 
     // Performs Bubble Sort and returns execution time in milliseconds
